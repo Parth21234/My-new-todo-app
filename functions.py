@@ -1,5 +1,7 @@
 FILEPATH = '/home/parth/program/files/subfiles/todos.txt'
 
+# This is the backend and interface for the app.
+
 
 def get_todos(filepath=FILEPATH):  # filepath is a parameter.
     """ Read the text file and return the list of to-do items."""
@@ -23,5 +25,5 @@ if __name__ == "__main__":
     print(get_todos())
 
 # The value of __name__ is __main__ if we print __name__ here in functions.py
-# But if we access the valur of __name__ in the wtf.py through importing functions
+# But if we access the valur of __name__ in the cli.py through importing functions
 # Then the value of __name__ turn out to be functions.

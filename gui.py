@@ -2,7 +2,7 @@ import functions
 import PySimpleGUI as sg
 
 label = sg.Text("Type in a to-do")  # Text has to have a string as the argument.
-input_box = sg.InputText(tooltip="Enter To-do", key='todo')
+input_box = sg.InputText(tooltip="Enter To-do", key='todo')  # Key stores what we enter in the input  box.
 add_button = sg.Button("Add")
 list_box = sg.Listbox(values=functions.get_todos(), key='todos_existing',
                       enable_events=True, size=[45, 10])
@@ -19,7 +19,7 @@ window = sg.Window('My-To-Do App',
 # If we put label and input_box in the different boxes then the input_box would come in the next row.
 
 while True:
-    event, values = window.read()  # It displays the window actually on the screen.
+    event, values = window.read()  # It returns the touch of the user, the event the user is performing and the action.
     print(event)
     print(values)
     match event:
